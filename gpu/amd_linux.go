@@ -182,10 +182,10 @@ func AMDGetGPUInfo() []RocmGPUInfo {
 			return nil
 		}
 
-		if int(major) < RocmComputeMin {
-			slog.Warn(fmt.Sprintf("amdgpu too old gfx%d%x%x", major, minor, patch), "gpu", gpuID)
-			continue
-		}
+		// if int(major) < RocmComputeMin {
+		// 	slog.Warn(fmt.Sprintf("amdgpu too old gfx%d%x%x", major, minor, patch), "gpu", gpuID)
+		// 	continue
+		// }
 
 		// Look up the memory for the current node
 		totalMemory := uint64(0)
